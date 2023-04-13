@@ -1,0 +1,59 @@
+/*Faça uma função que, dada uma matriz M8×5 de
+reais, gere a matriz Mt, sua transposta.*/
+#include<stdio.h>
+#include<string.h>
+#include <time.h>
+void Mtransposta(float M[8][5], float Mt[5][8])
+{
+	int i, j, a=0, b=0;
+	for(i=0; i<5;i++)
+	{
+		for(j=0;j<8; j++)
+		{
+			Mt[i][j] = M[a][b];
+			a++;
+		}
+	b++;
+		
+	}
+}
+void preencheraleatorio(float *M[8][5])
+{
+	int i, j;
+    srand(time(NULL));
+
+    for(i = 0; i < 8; i++)
+	{
+        for(j = 0; j < 5; j++)
+		{
+            M[i][j] = rand() %99;
+        }
+    }
+}
+void main ()
+{
+	int i, j;
+	float M[8][5], Mt[i][j];
+	
+	preencheraleatorio(M);
+	Mtransposta (M, Mt);
+	printf("matriz original \n\n");
+	for(i = 0; i < 8; i++)
+	{
+       	for(j = 0; j < 5; j++)
+       	{
+   			printf("%0.1f    ", M[i][j]);
+        }
+       	printf("\n");
+   	}
+
+   		printf("matriz transposta \n\n");
+	for(i = 0; i < 5; i++)
+	{
+       	for(j = 0; j < 8; j++)
+       	{
+   			printf("%0.1f    ", Mt[i][j]);
+        }
+       	printf("\n");
+   	}
+}
