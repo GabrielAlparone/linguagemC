@@ -1,0 +1,56 @@
+/*Uma loja de automóveis mantém os carros à
+venda sob a forma de um vetor de structs
+contendo as seguintes informações, para cada
+veículo: placa, modelo, marca, cor,
+quilometragem, ano modelo/fabricação (deve
+ser um struct), valor e tipo (usado ou 0 km,
+conforme o valor do campo quilometragem).
+Pede-se a declaração de uma variável que
+represente o estoque de veículos da loja,
+incluindo todas as declarações de tipos que
+possam ser necessárias.*/
+
+void exibircarros(Tcarro carros [], int quant,, char m[], int a1, int a2)
+{
+	int i;
+	for(i=0;i<quant;i++)
+	{
+		if ((strcmp(m, carros[i].modelo)==0)&&(carros[i].ano.fabricacao>a1)&&(carros[i].ano.fabricacao<=a2)&&(carros[i].valor<=x))
+		{
+			exibircarro(carros[i]);
+		}
+		
+	}
+}
+
+void exibircarro(Tcarro c)
+{
+	printf("Placa: %s\n",c placa)
+}
+
+void reajustar(Tcarro carros[], int quant, float taxa)
+{
+	int i;
+	for(i=0;i<quant;i++)
+	{
+		if (strcmp(carros[i].tipo, "o km") ==0)|| (carros[i]km ==0)
+		{
+			carros[i].valor=carros[i].valor*1+(taxa/100);
+		}
+	}
+}
+
+int retirar(Tcarro carros[], int *quant, char placa[])
+{
+	i=0;
+	for (i=0; i<*quant; i++)
+	{
+		if 	(strcmp(placa, carros[i.placa])==0)
+		{
+			carros[i] = carros[*quant-1];
+			(*quant)--;
+			return 1;
+		}
+	}
+	return 0;
+}
